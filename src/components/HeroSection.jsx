@@ -67,31 +67,31 @@ const FloatingDock = () => {
     {
       title: "LinkedIn",
       icon: <Linkedin className="w-5 h-5" />,
-      href: "https://linkedin.com/in/your-profile",
+      href: "https://www.linkedin.com/in/omesha-pasan-1503a5292",
       color: "hover:text-blue-500"
     },
     {
       title: "GitHub",
       icon: <Github className="w-5 h-5" />,
-      href: "https://github.com/your-username",
+      href: "https://github.com/omeshapasan2",
       color: "hover:text-gray-300"
     },
     {
       title: "Email",
       icon: <Mail className="w-5 h-5" />,
-      href: "mailto:your.email@example.com",
+      href: "mailto:omeshapasan@gmail.com",
       color: "hover:text-red-500"
     },
     {
       title: "Phone",
       icon: <Phone className="w-5 h-5" />,
-      href: "tel:+1234567890",
+      href: "tel:+94787386042",
       color: "hover:text-green-500"
     }
   ];
 
   return (
-    <div className="fixed bottom-8 left-1/2 transform -translate-x-1/2 z-50">
+    <div className="bottom-8 left-1/2 transform -translate-x-1/2 z-50">
       <div className="flex items-center gap-2 bg-black/20 backdrop-blur-lg border border-white/10 rounded-full px-4 py-3">
         {links.map((link, index) => (
           <a
@@ -156,26 +156,17 @@ const HeroSection = () => {
 
             {/* Right Content - Profile Picture */}
             <div className="flex justify-center lg:justify-end">
-              <div className="relative">
-                {/* Animated border */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-                
-                {/* Profile image container */}
-                <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-1">
-                  <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
-                    {/* Placeholder for profile image */}
-                    <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-700 to-gray-800 flex items-center justify-center">
-                      <span className="text-6xl text-gray-400">👤</span>
+                    <div className="relative w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
+                      {/* Backdrop element */}
+                      <div className="absolute -top-10 -left-10 w-[120%] h-[120%] bg-gradient-to-br from-[var(--primary)] to-blue-400 rounded-[30%] skew-y-6 opacity-40 z-0"></div>
+
+                      {/* Profile image */}
+                      <img 
+                        src="https://avatars.githubusercontent.com/u/100626688?v=4"
+                        alt="Omesha Pasan"
+                        className="w-full h-full object-cover relative z-10 rounded-full"
+                      />
                     </div>
-                    {/* Replace the above div with your actual image */}
-                    {/* <img 
-                      src="/path-to-your-profile-image.jpg" 
-                      alt="Omesha Pasan"
-                      className="w-full h-full object-cover rounded-full"
-                    /> */}
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
