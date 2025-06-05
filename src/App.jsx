@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import HeroSection from './components/HeroSection'
 import Skills from './components/Skills'
+import { ProjectsMarquee } from './components/ProjectsMarquee'
 
 function App() {
   
@@ -12,6 +13,9 @@ function App() {
     <>
       <HeroSection />
       <Skills />
+      <ProjectsMarquee />
+      
+        
     </>
   )
 }

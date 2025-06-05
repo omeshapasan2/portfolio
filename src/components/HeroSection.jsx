@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Linkedin, Mail, Phone, Download, ExternalLink } from 'lucide-react';
+import cn from 'clsx';
 
 const Spotlight = ({ className, fill }) => {
   return (
@@ -19,33 +20,6 @@ const Spotlight = ({ className, fill }) => {
       </defs>
       <rect width="100%" height="100%" fill="url(#spotlight)" />
     </svg>
-  );
-};
-
-const GridBackground = () => {
-  return (
-    <div className="absolute inset-0">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-900/20" />
-      <div 
-        className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '20px 20px'
-        }}
-      />
-      <div 
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.3) 1px, transparent 0)
-          `,
-          backgroundSize: '20px 20px'
-        }}
-      />
-    </div>
   );
 };
 
@@ -91,28 +65,46 @@ const FloatingDock = () => {
   ];
 
   return (
-    <div className="bottom-8 left-1/2 transform -translate-x-1/2 z-50">
-      <div className="flex items-center gap-2 bg-black/20 backdrop-blur-lg border border-white/10 rounded-full px-4 py-3">
-        {links.map((link, index) => (
-          <a
-            key={index}
-            href={link.href}
-            title={link.title}
-            className={`p-3 rounded-full bg-white/5 hover:bg-white/10 text-white ${link.color} transition-all duration-300 hover:scale-110 hover:-translate-y-1`}
-          >
-            {link.icon}
-          </a>
-        ))}
+    <div className="z-50">
+      <div className="relative inline-flex overflow-hidden rounded-full p-[2px] group focus:outline-none">
+        {/* Animated Border */}
+        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+        
+        {/* Inner content */}
+        <div className="relative flex items-center gap-2 bg-black/20 backdrop-blur-lg border border-white/10 rounded-full px-4 py-3">
+          {links.map((link, index) => (
+            <a
+              key={index}
+              href={link.href}
+              title={link.title}
+              className={`p-3 rounded-full bg-white/5 hover:bg-white/10 text-white ${link.color} transition-all duration-300 hover:scale-110 hover:-translate-y-1`}
+            >
+              {link.icon}
+            </a>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
+
 const HeroSection = () => {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Grid Background */}
-      <GridBackground />
+      <div className="relative flex h-[50rem] w-full items-center justify-center bg-white dark:bg-black">
+              <div
+                className={cn(
+                  "absolute inset-0",
+                  "[background-size:20px_20px]",
+                  "[background-image:radial-gradient(#d4d4d4_1px,transparent_1px)]",
+                  "dark:[background-image:radial-gradient(#404040_1px,transparent_1px)]",
+                )}
+              />
+              {/* Radial gradient for the container to give a faded look */}
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
+      
       
       {/* Spotlight Effects */}
       <div className="absolute top-0 left-0 w-96 h-96 opacity-30">
@@ -149,8 +141,10 @@ const HeroSection = () => {
               </div>
 
               {/* CTA Button */}
-              <div className="pt-4">
+              <div className="pt-4 flex items-center gap-4">
                 <ViewCVButton />
+                {/* Floating Social Links */}
+                <FloatingDock />
               </div>
             </div>
 
@@ -172,8 +166,9 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Floating Social Links */}
-      <FloatingDock />
+
+      </div>
+
     </div>
   );
 };
