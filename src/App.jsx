@@ -7,6 +7,7 @@ import Skills from './components/Skills'
 import { ProjectsMarquee } from './components/ProjectsMarquee'
 import { ProjectCards } from './components/ProjectCards'
 import Education from './components/Education'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
       <ProjectsMarquee />
       <ProjectCards />
       <Education />
+      <Footer />
     </>
   )
 }
