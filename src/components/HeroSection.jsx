@@ -1,5 +1,5 @@
-import React from 'react';
-import { Github, Linkedin, Mail, Phone, Download, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Github, Linkedin, Mail, Phone, Download, ExternalLink, X } from 'lucide-react';
 import cn from 'clsx';
 
 const Spotlight = ({ className, fill }) => {
@@ -24,15 +24,131 @@ const Spotlight = ({ className, fill }) => {
 };
 
 const ViewCVButton = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Handle escape key press
+  useEffect(() => {
+    const handleEscapeKey = (event) => {
+      if (event.key === 'Escape') {
+        setIsModalOpen(false);
+      }
+    };
+
+    if (isModalOpen) {
+      document.addEventListener('keydown', handleEscapeKey);
+      // Prevent body scrolling when modal is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKey);
+      document.body.style.overflow = 'auto';
+    };
+  }, [isModalOpen]);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleModalBackdropClick = (e) => {
+    if (e.target === e.currentTarget) {
+      closeModal();
+    }
+  };
+
   return (
-    <button className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 group">
-      <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-      <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 py-1 text-sm font-medium text-white backdrop-blur-3xl group-hover:bg-slate-900 transition-colors">
-        <Download className="w-4 h-4 mr-2" />
-        View CV
-        <ExternalLink className="w-3 h-3 ml-2 opacity-70" />
-      </span>
-    </button>
+    <>
+      {/* View CV Button */}
+      <button 
+        onClick={openModal}
+        className="relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 group transition-all duration-300 hover:scale-105"
+      >
+        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-6 py-1 text-sm font-medium text-white backdrop-blur-3xl group-hover:bg-slate-900 transition-colors">
+          <Download className="w-4 h-4 mr-2" />
+          View CV
+          <ExternalLink className="w-3 h-3 ml-2 opacity-70" />
+        </span>
+      </button>
+
+      {/* Modal */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black bg-opacity-75 backdrop-blur-sm"
+          onClick={handleModalBackdropClick}
+        >
+          <div className="relative w-full h-full max-w-6xl max-h-[90vh] m-4 bg-white rounded-lg shadow-2xl overflow-hidden">
+            {/* Close Button */}
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 z-10 p-2 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full shadow-lg transition-all duration-200 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-slate-400"
+            >
+              <X className="w-6 h-6 text-gray-700" />
+            </button>
+
+            {/* CV Content Container */}
+            <div className="w-full h-full p-4 pt-16">
+              <div className="w-full h-full rounded-lg overflow-hidden shadow-inner">
+                <iframe
+                  src="https://www.canva.com/design/DAGkTBlVMd0/ydTvrdC_TUqU2mgeLiIQ4Q/view?embed"
+                  allowFullScreen
+                  allow="fullscreen"
+                  loading="lazy"
+                  className="w-full h-full border-0"
+                  title="Omesha Pasan CV"
+                />
+              </div>
+            </div>
+
+            {/* Loading overlay (optional) */}
+            <div className="absolute inset-0 bg-gray-100 flex items-center justify-center" id="loading-overlay">
+              <div className="flex flex-col items-center space-y-4">
+                <div className="w-12 h-12 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin"></div>
+                <p className="text-gray-600 font-medium">Loading CV...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        
+        iframe {
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+        }
+        
+        iframe:not([src=""]) {
+          opacity: 1;
+        }
+      `}</style>
+
+      <script dangerouslySetInnerHTML={{
+        __html: `
+          // Hide loading overlay once iframe loads
+          document.addEventListener('DOMContentLoaded', function() {
+            const iframe = document.querySelector('iframe[title="Omesha Pasan CV"]');
+            const loadingOverlay = document.getElementById('loading-overlay');
+            
+            if (iframe && loadingOverlay) {
+              iframe.addEventListener('load', function() {
+                loadingOverlay.style.display = 'none';
+              });
+            }
+          });
+        `
+      }} />
+    </>
   );
 };
 
