@@ -1,5 +1,6 @@
 import React, { useState, useRef, useMemo } from "react";
 import { motion, useMotionValue, useMotionTemplate, AnimatePresence } from "framer-motion";
+import { CardSpotlight  } from './ui/card-spotlight';
 
 // Utility function for className merging
 const cn = (...classes) => {
@@ -23,65 +24,6 @@ const CanvasRevealEffect = ({
       {showGradient && (
         <div className="absolute inset-0 bg-gradient-to-t from-gray-950 to-[84%]" />
       )}
-    </div>
-  );
-};
-
-// Card Spotlight Component
-const CardSpotlight = ({
-  children,
-  radius = 350,
-  color = "#262626",
-  className,
-  ...props
-}) => {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  
-  function handleMouseMove({ currentTarget, clientX, clientY }) {
-    let { left, top } = currentTarget.getBoundingClientRect();
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  }
-
-  const [isHovering, setIsHovering] = useState(false);
-  const handleMouseEnter = () => setIsHovering(true);
-  const handleMouseLeave = () => setIsHovering(false);
-  
-  return (
-    <div
-      className={cn(
-        "group/spotlight p-8 rounded-xl relative border border-neutral-800 bg-black/90 backdrop-blur-sm dark:border-neutral-700 transition-all duration-300 hover:border-blue-500/50",
-        className
-      )}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      {...props}>
-      <motion.div
-        className="pointer-events-none absolute z-0 -inset-px rounded-xl opacity-0 transition duration-300 group-hover/spotlight:opacity-100"
-        style={{
-          backgroundColor: color,
-          maskImage: useMotionTemplate`
-            radial-gradient(
-              ${radius}px circle at ${mouseX}px ${mouseY}px,
-              white,
-              transparent 80%
-            )
-          `,
-        }}>
-        {isHovering && (
-          <CanvasRevealEffect
-            animationSpeed={5}
-            containerClassName="bg-transparent absolute inset-0 pointer-events-none"
-            colors={[
-              [59, 130, 246],
-              [139, 92, 246],
-            ]}
-            dotSize={3} />
-        )}
-      </motion.div>
-      {children}
     </div>
   );
 };
@@ -227,24 +169,21 @@ const educationData = [
 // Main Education Showcase Component
 export default function Education() {
   return (
+    <CardSpotlight className="">
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-black to-gray-900 p-8">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <CardSpotlight className="mb-12 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 relative z-20">
+        
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold text-white tracking-tight relative z-20">
               Education
-              <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-4"></div>
+              <div className="w-24 h-1 bg-blue-500  mx-auto mt-4"></div>
             </h1>
             <p className="text-xl text-zinc-300 relative z-20 max-w-2xl mx-auto">
               A comprehensive journey through software engineering education, from foundational studies to advanced specialization
             </p>
-          </motion.div>
-        </CardSpotlight>
+          </div>
+        
 
         {/* Education Timeline */}
         <motion.div
@@ -257,5 +196,6 @@ export default function Education() {
 
       </div>
     </div>
+    </CardSpotlight>
   );
 }
