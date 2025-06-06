@@ -3,6 +3,7 @@ import { Github, Linkedin, Mail, Phone, Download, ExternalLink, X } from 'lucide
 import cn from 'clsx';
 import { MdDownload } from "react-icons/md";
 import { ImNewTab } from "react-icons/im";
+import profile from '../assets/pic2.jpg';
 
 const Spotlight = ({ className, fill }) => {
   return (
@@ -295,7 +296,7 @@ const HeroSection = () => {
 
                       {/* Profile image */}
                       <img 
-                        src="https://avatars.githubusercontent.com/u/100626688?v=4"
+                        src={profile}
                         alt="Omesha Pasan"
                         className="w-full h-full object-cover relative z-10 rounded-full"
                       />

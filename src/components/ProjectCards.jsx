@@ -1,6 +1,10 @@
 "use client";
 import React from "react";
 import { PinContainer } from "./ui/3d-pin";
+import fably from '../assets/fably.png';
+import timely from '../assets/timely.png';
+import hypernotes from '../assets/hypernotes.png';
+import flixlog from '../assets/flixlog.png';
 
 export function ProjectCards() {
   return (
@@ -31,7 +35,7 @@ export function ProjectCards() {
 
             <div className="flex flex-1 w-full rounded-lg mt-4 overflow-hidden">
                     <img
-                        src="src\assets\fably.png"
+                        src={fably}
                         alt="Descriptive alt text"
                         className="w-full h-auto object-cover"
                     />
@@ -65,7 +69,7 @@ export function ProjectCards() {
 
             <div className="flex flex-1 w-full rounded-lg mt-4 overflow-hidden">
                     <img
-                        src="src\assets\timely.png"
+                        src={timely}
                         alt="Descriptive alt text"
                         className="w-full h-auto object-cover"
                     />
@@ -98,7 +102,7 @@ export function ProjectCards() {
 
             <div className="flex flex-1 w-full rounded-lg mt-4 overflow-hidden">
                     <img
-                        src="src\assets\hypernotes.png"
+                        src={hypernotes}
                         alt="Descriptive alt text"
                         className="w-full h-auto object-cover"
                     />
@@ -133,7 +137,7 @@ export function ProjectCards() {
 
             <div className="flex flex-1 w-full rounded-lg mt-4 overflow-hidden">
                     <img
-                        src="src\assets\flixlog.png"
+                        src={flixlog}
                         alt="Descriptive alt text"
                         className="w-full h-auto object-cover"
                     />
