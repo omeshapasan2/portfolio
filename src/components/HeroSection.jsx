@@ -4,6 +4,7 @@ import cn from 'clsx';
 import { MdDownload } from "react-icons/md";
 import { ImNewTab } from "react-icons/im";
 import profile from '../assets/pic2.jpg';
+import Typewriter from "typewriter-effect";
 
 const Spotlight = ({ className, fill }) => {
   return (
@@ -270,9 +271,17 @@ const HeroSection = () => {
                   <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent">
                     Omesha Pasan
                   </h1>
-                  <h2 className="text-2xl lg:text-3xl text-blue-400 font-semibold">
-                    Undergraduate Software Engineer
-                  </h2>
+                  
+                  <Typewriter options={{
+                    strings: ["Undergraduate Software Engineer" , "Full Stack Developer"],
+                    wrapperClassName: "text-xl lg:text-3xl text-blue-400 font-semibold",
+                    autoStart: true,
+                    loop: true,
+                    delay: 75,
+                    deleteSpeed: 50,
+                    cursor: "|",
+                    cursorClassName: "text-blue-400"
+                  }} />
                 </div>
                 
                 <p className="text-lg text-gray-300 leading-relaxed max-w-2xl">

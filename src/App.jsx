@@ -14,12 +14,12 @@ function App() {
 
   return (
     <>
-      <HeroSection />
-      <Skills />
-      <ProjectsMarquee />
-      <ProjectCards />
-      <Education />
-      <Footer />
+        <HeroSection />
+        <Skills />
+        <ProjectsMarquee />
+        <ProjectCards />
+        <Education />
+        <Footer />
     </>
   )
 }
