@@ -1,17 +1,17 @@
 "use client";
 import React from "react";
+import { motion } from "framer-motion";
 import { PinContainer } from "./ui/3d-pin";
-import fably from '../assets/fably.png';
-import timely from '../assets/timely.png';
-import hypernotes from '../assets/hypernotes.png';
-import flixlog from '../assets/flixlog.png';
+import fably from "../assets/fably.png";
+import timely from "../assets/timely.png";
+import hypernotes from "../assets/hypernotes.png";
+import flixlog from "../assets/flixlog.png";
 
-export function ProjectCards() {
-  return (
-    <div className="h-[40rem] w-full flex items-center justify-center ">
-        
-        {/* Fably */}
-        <PinContainer title="Visit Live Site" href="https://fably.pro">
+const projects = [
+  {
+    title: "https://fably.pro",
+    component: (
+      <PinContainer title="Visit Live Site" href="https://fably.pro">
             <div
             className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] min-h-[20rem]"
 >
@@ -42,9 +42,12 @@ export function ProjectCards() {
                 </div>
             </div>
         </PinContainer>
-
-        {/* Timely */}
-        <PinContainer title="Visit Live Site" href="https://timely.omeshapasan.site">
+    ),
+  },
+  {
+    title: "https://timely.omeshapasan.site",
+    component: (
+      <PinContainer title="Visit Live Site" href="https://timely.omeshapasan.site">
             <div
             className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] min-h-[20rem]"
 >
@@ -76,9 +79,12 @@ export function ProjectCards() {
                 </div>
             </div>
         </PinContainer>
-
-        {/* HyperNotes */}
-        <PinContainer title="Visit Live Site" href="https://notes.omeshapasan.site">
+    ),
+  },
+  {
+    title: "https://notes.omeshapasan.site",
+    component: (
+      <PinContainer title="Visit Live Site" href="https://notes.omeshapasan.site">
             <div
             className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] min-h-[20rem]"
 >
@@ -109,9 +115,12 @@ export function ProjectCards() {
                 </div>
             </div>
         </PinContainer>
-
-        {/* FlixLog */}
-        <PinContainer title="Visit Live Site" href="https://flixlog.omeshapasan.site">
+    ),
+  },
+  {
+    title: "https://flixlog.omeshapasan.site",
+    component: (
+      <PinContainer title="Visit Live Site" href="https://flixlog.omeshapasan.site">
             <div
             className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] min-h-[20rem]"
 >
@@ -144,7 +153,36 @@ export function ProjectCards() {
                 </div>
             </div>
         </PinContainer>
+    ),
+  },
+];
 
+export function ProjectCards() {
+  const duplicatedProjects = [...projects, ...projects]; // for seamless looping
+  const totalWidth = projects.length * 320; // Each card ~320px wide (20rem)
+
+  return (
+    <div className="h-[40rem] w-full flex items-center justify-center ">
+
+
+
+
+      <motion.div
+        className="flex gap-4"
+        animate={{ x: [`0px`, `-${totalWidth}px`] }}
+        transition={{
+          repeat: Infinity,
+          repeatType: "loop",
+          ease: "linear",
+          duration: 20, // Adjust speed
+        }}
+      >
+        {duplicatedProjects.map((proj, index) => (
+          <div key={index} className="shrink-0">
+            {proj.component}
+          </div>
+        ))}
+      </motion.div>
     </div>
   );
 }
