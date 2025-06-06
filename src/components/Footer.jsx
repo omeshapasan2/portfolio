@@ -214,7 +214,7 @@ function Footer() {
   };
 
   return (
-    <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+    <div className="h-140 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
       {/* Background mask - lowest layer */}
       <div className="absolute inset-0 w-full h-full bg-slate-900 z-10 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
       
@@ -273,6 +273,9 @@ function Footer() {
         <div className="flex-2 text-white">
           <Toaster />
           <form ref={form} onSubmit={sendEmail} className='flex flex-col space-y-4 p-6'>
+            <h3 className="text-2xl font-bold text-white mb-2">Get In Touch</h3>
+            <p className="text-gray-300 mb-6">Send me a message and I'll get back to you soon.</p>
+            
             {/* Name Input with Canvas */}
             <div className="relative">
               <canvas
