@@ -3,46 +3,47 @@ import { ThreeDMarquee } from "./ui/3d-marquee";
 
 export function ProjectsMarquee() {
   const images = [
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123604/xeajacjabyjxeqlpiqwp.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
 
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123604/xeajacjabyjxeqlpiqwp.png",
 
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123604/xeajacjabyjxeqlpiqwp.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
 
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123604/xeajacjabyjxeqlpiqwp.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
 
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123604/xeajacjabyjxeqlpiqwp.png",
 
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123604/xeajacjabyjxeqlpiqwp.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
 
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123604/xeajacjabyjxeqlpiqwp.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
 
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
-    "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
-  ];
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123604/xeajacjabyjxeqlpiqwp.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123601/qmppymco3uiroaidipr4.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123602/bznvazx5gjf0gtvb6ar5.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1749123603/ko7x7bxfzjoeybpm1s5v.png"
+];
+
   return (
     <div className="relative mx-auto my-10 flex h-screen w-full max-w-7xl flex-col items-center justify-center overflow-hidden rounded-3xl">
         <h2 className="relative z-20 mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl">
