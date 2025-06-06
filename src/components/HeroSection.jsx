@@ -292,7 +292,7 @@ const HeroSection = () => {
             <div className="flex justify-center lg:justify-end">
                     <div className="relative w-72 h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96">
                       {/* Backdrop element */}
-                      <div className="absolute -top-10 -left-10 w-[120%] h-[120%] bg-gradient-to-br from-[var(--primary)] to-blue-400 rounded-[30%] skew-y-6 opacity-40 z-0"></div>
+                      <div className="absolute -top-10 -left-10 w-[120%] h-[120%] bg-gradient-to-br from-[var(--primary)] to-blue-400 rounded-[10%] skew-y-6 opacity-40 z-0"></div>
 
                       {/* Profile image */}
                       <img 
