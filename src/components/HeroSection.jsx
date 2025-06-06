@@ -118,7 +118,7 @@ const ViewCVButton = () => {
                 </a>
                 
                 <a 
-                  href="https://cv.omeshapasan.site/Omesha_Pasan_CV.pdf"
+                  href="https://res.cloudinary.com/dhsqxetzh/image/upload/v1749195175/vbjxzd5nvpugfksrlyd6.pdf"
                   download
                   target="_blank"
                   rel="noopener noreferrer"
