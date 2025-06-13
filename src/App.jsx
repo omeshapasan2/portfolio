@@ -8,12 +8,14 @@ import { ProjectsMarquee } from './components/ProjectsMarquee'
 import { ProjectCards } from './components/ProjectCards'
 import Education from './components/Education'
 import Footer from './components/Footer'
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   
 
   return (
     <>
+        
         <HeroSection />
         <Skills />
         <ProjectsMarquee />
