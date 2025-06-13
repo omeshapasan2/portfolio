@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-        
+        <Analytics/>
         <HeroSection />
         <Skills />
         <ProjectsMarquee />
