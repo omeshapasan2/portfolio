@@ -5,45 +5,45 @@ export function ProjectsMarquee() {
   // Array of image URLs for the marquee
   // 8 Sets / 4 images each
   const images = [
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
+
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
+
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
+
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
+
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
+
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
+
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
 
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
-
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
-
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
-
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
-
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
-
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
-
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png"
+  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png"
 ];
 
   return (
