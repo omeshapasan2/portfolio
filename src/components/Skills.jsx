@@ -38,6 +38,13 @@ const people = [
   },
 
   {
+    id: 5,
+    designation: "React Native",
+    image:
+      "https://img.icons8.com/?size=100&id=58811&format=png&color=000000",
+  },
+
+  {
     id: 6,
     designation: "Java",
     image:
