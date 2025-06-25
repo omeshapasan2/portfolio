@@ -38,46 +38,46 @@ const people = [
   },
 
   {
-    id: 5,
+    id: 6,
     designation: "React Native",
     image:
       "https://img.icons8.com/?size=100&id=58811&format=png&color=000000",
   },
 
   {
-    id: 6,
+    id: 7,
     designation: "Java",
     image:
       "https://img.icons8.com/?size=100&id=13679&format=png&color=000000",
   },
 
   {
-    id: 7,
+    id: 8,
     designation: "Node.js",
     image:
       "https://img.icons8.com/?size=100&id=54087&format=png&color=000000",
   },
 
   {
-    id: 8,
+    id: 9,
     designation: "Express",
     image:
       "https://img.icons8.com/?size=100&id=SDVmtZ6VBGXt&format=png&color=000000",
   },
 
   {
-    id: 9,
+    id: 10,
     designation: "MongoDB",
     image:
       "https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000",
   },
   {
-    id: 10,
+    id: 11,
     designation: "Python",
     image:
       "https://img.icons8.com/?size=100&id=13441&format=png&color=000000",
   },
-  
+
   {
     id: 12,
     designation: "Flask",
