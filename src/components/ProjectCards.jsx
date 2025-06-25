@@ -7,6 +7,7 @@ import timely from "../assets/timely.png";
 import hypernotes from "../assets/hypernotes.png";
 import flixlog from "../assets/flixlog.png";
 import bookstay from "../assets/bookstay.png";
+import cloudvault from "../assets/cloudvault.png";
 
 const projects = [
   {
