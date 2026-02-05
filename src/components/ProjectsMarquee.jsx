@@ -5,45 +5,45 @@ export function ProjectsMarquee() {
   // Array of image URLs for the marquee
   // 8 Sets / 4 images each
   const images = [
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/Project-Pictures-Do-Not-Delete/timely_luwbhv.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/Project-Pictures-Do-Not-Delete/flixlog_arw22u.png", 
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750862330/Project-Pictures-Do-Not-Delete/pv68ikg3hyx9akiwvk0e.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/Project-Pictures-Do-Not-Delete/hypernotes_ahfspn.png",
 
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
-  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750593701/bookstay.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/Project-Pictures-Do-Not-Delete/fably_tszdt6.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750593701/Project-Pictures-Do-Not-Delete/bookstay.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/Project-Pictures-Do-Not-Delete/flixlog_arw22u.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/Project-Pictures-Do-Not-Delete/hypernotes_ahfspn.png",
 
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/Project-Pictures-Do-Not-Delete/hypernotes_ahfspn.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/Project-Pictures-Do-Not-Delete/fably_tszdt6.png",
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750862330/Project-Pictures-Do-Not-Delete/pv68ikg3hyx9akiwvk0e.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/Project-Pictures-Do-Not-Delete/timely_luwbhv.png",
 
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/Project-Pictures-Do-Not-Delete/flixlog_arw22u.png",
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750862330/Project-Pictures-Do-Not-Delete/pv68ikg3hyx9akiwvk0e.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
-  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750593701/bookstay.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/Project-Pictures-Do-Not-Delete/hypernotes_ahfspn.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750593701/Project-Pictures-Do-Not-Delete/bookstay.png",
 
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/timely_luwbhv.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
-  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750593701/bookstay.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/Project-Pictures-Do-Not-Delete/timely_luwbhv.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/Project-Pictures-Do-Not-Delete/hypernotes_ahfspn.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750593701/Project-Pictures-Do-Not-Delete/bookstay.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/Project-Pictures-Do-Not-Delete/flixlog_arw22u.png",
 
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/Project-Pictures-Do-Not-Delete/fably_tszdt6.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/Project-Pictures-Do-Not-Delete/flixlog_arw22u.png",
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750862330/Project-Pictures-Do-Not-Delete/pv68ikg3hyx9akiwvk0e.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/Project-Pictures-Do-Not-Delete/hypernotes_ahfspn.png",
 
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png",
-  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750593701/bookstay.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/Project-Pictures-Do-Not-Delete/hypernotes_ahfspn.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750593701/Project-Pictures-Do-Not-Delete/bookstay.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/Project-Pictures-Do-Not-Delete/flixlog_arw22u.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/Project-Pictures-Do-Not-Delete/fably_tszdt6.png",
 
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/flixlog_arw22u.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324909/Project-Pictures-Do-Not-Delete/flixlog_arw22u.png",
   "http://res.cloudinary.com/dldgeyki5/image/upload/v1750862330/Project-Pictures-Do-Not-Delete/pv68ikg3hyx9akiwvk0e.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/fably_tszdt6.png",
-  "http://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/hypernotes_ahfspn.png"
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324906/Project-Pictures-Do-Not-Delete/fably_tszdt6.png",
+  "https://res.cloudinary.com/dldgeyki5/image/upload/v1750324907/Project-Pictures-Do-Not-Delete/hypernotes_ahfspn.png"
 ];
 
   return (
