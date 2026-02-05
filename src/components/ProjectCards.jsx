@@ -8,6 +8,7 @@ import hypernotes from "../assets/hypernotes.png";
 import flixlog from "../assets/flixlog.png";
 import bookstay from "../assets/bookstay.png";
 import cloudvault from "../assets/cloudvault.png";
+import clothlane from "../assets/clothlane.png";
 
 const projects = [
   {
@@ -220,6 +221,41 @@ const projects = [
       </PinContainer>
     ),
   },
+  {
+    title: "https://clothlane.omesha.site",
+    component: (
+      <PinContainer title="Visit Live Site" href="https://clothlane.omesha.site">
+        <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] min-h-[20rem]">
+          <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
+            "ClothLane" E-Commerce Platform
+          </h3>
+          <p className="text-base !m-0 !p-0 font-normal text-slate-500">
+            A full-stack e-commerce application composed of a Node.js/Express backend and a React (Vite) frontend. Supports user authentication, payments, reviews, and product management.
+          </p>
+
+          <ul className="list-disc pl-5 mt-2 text-slate-500 text-sm">
+            <li>Clerk-based authentication & authorization</li>
+            <li>Product Catalog with search, sort, and categories</li>
+            <li>Redux-managed cart & Stripe checkout</li>
+            <li>Admin Tools & Sales Analytics</li>
+            <li>Cloudflare R2 Image Storage</li>
+          </ul>
+
+          <p className="mt-2 text-slate-500 text-sm">
+            <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB, Stripe, Clerk
+          </p>
+
+          <div className="flex flex-1 w-full rounded-lg mt-4 overflow-hidden">
+            <img
+              src={clothlane}
+              alt="ClothLane E-Commerce Platform"
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        </div>
+      </PinContainer>
+    ),
+  },
 ];
 
 export function ProjectCards() {
@@ -232,8 +268,8 @@ export function ProjectCards() {
       <div className="flex items-center justify-center h-full">
         <motion.div
           className="flex gap-20"
-          animate={{ 
-            x: [0, -totalWidth] 
+          animate={{
+            x: [0, -totalWidth]
           }}
           transition={{
             repeat: Infinity,
@@ -246,8 +282,8 @@ export function ProjectCards() {
           }}
         >
           {duplicatedProjects.map((proj, index) => (
-            <div 
-              key={`${proj.title}-${index}`} 
+            <div
+              key={`${proj.title}-${index}`}
               className="shrink-0 w-[20rem]"
             >
               {proj.component}
