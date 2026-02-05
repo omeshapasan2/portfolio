@@ -45,9 +45,9 @@ const projects = [
     ),
   },
   {
-    title: "https://timely.omeshapasan.site",
+    title: "https://timely.omesha.site",
     component: (
-      <PinContainer title="Visit Live Site" href="https://timely.omeshapasan.site">
+      <PinContainer title="Visit Live Site" href="https://timely.omesha.site">
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] min-h-[20rem]">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
             "Timely" Timetable App
@@ -80,9 +80,9 @@ const projects = [
     ),
   },
   {
-    title: "https://notes.omeshapasan.site",
+    title: "https://notes.omesha.site",
     component: (
-      <PinContainer title="Visit Live Site" href="https://notes.omeshapasan.site">
+      <PinContainer title="Visit Live Site" href="https://notes.omesha.site">
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] min-h-[20rem]">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
             "HyperNotes" Cross-Platform Notes App
@@ -114,9 +114,9 @@ const projects = [
     ),
   },
   {
-    title: "https://flixlog.omeshapasan.site",
+    title: "https://flixlog.omesha.site",
     component: (
-      <PinContainer title="Visit Live Site" href="https://flixlog.omeshapasan.site">
+      <PinContainer title="Visit Live Site" href="https://flixlog.omesha.site">
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] min-h-[20rem]">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
             "FlixLog" Movie/Series Explorer App
@@ -150,9 +150,9 @@ const projects = [
     ),
   },
   {
-    title: "https://bookstay.omeshapasan.site",
+    title: "https://bookstay.omesha.site",
     component: (
-      <PinContainer title="Visit Live Site" href="https://bookstay.omeshapasan.site">
+      <PinContainer title="Visit Live Site" href="https://bookstay.omesha.site">
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] min-h-[20rem]">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
             "BookStay" Hotel Booking Mobile App
@@ -186,9 +186,9 @@ const projects = [
     ),
   },
   {
-    title: "https://cloudvault.omeshapasan.site",
+    title: "https://cloudvault.omesha.site",
     component: (
-      <PinContainer title="Visit Live Site" href="https://cloudvault.omeshapasan.site">
+      <PinContainer title="Visit Live Site" href="https://cloudvault.omesha.site">
         <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] min-h-[20rem]">
           <h3 className="max-w-xs !pb-2 !m-0 font-bold text-base text-slate-100">
             "CloudVault" React & Node Cloudinary Image Gallery

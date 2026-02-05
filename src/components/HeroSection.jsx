@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Phone, Download, ExternalLink, X } from 'lucide-react';
 import cn from 'clsx';
-import profile from '../assets/pic2.jpg'; 
+import profile from '../assets/pic2.jpg';
 
 // Typewriter effect component
 const Typewriter = ({ options }) => {
@@ -11,19 +11,19 @@ const Typewriter = ({ options }) => {
 
   useEffect(() => {
     const { strings, delay = 75, deleteSpeed = 50 } = options;
-    
+
     const timer = setTimeout(() => {
       const currentString = strings[currentIndex];
-      
+
       if (!isDeleting) {
         setText(currentString.substring(0, text.length + 1));
-        
+
         if (text === currentString) {
           setTimeout(() => setIsDeleting(true), 1000);
         }
       } else {
         setText(currentString.substring(0, text.length - 1));
-        
+
         if (text === '') {
           setIsDeleting(false);
           setCurrentIndex((prev) => (prev + 1) % strings.length);
@@ -112,7 +112,7 @@ const ViewCVButton = () => {
   return (
     <>
       {/* View CV Button */}
-      <button 
+      <button
         onClick={openModal}
         className="relative inline-flex h-10 sm:h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 group transition-all duration-300 hover:scale-105"
       >
@@ -127,7 +127,7 @@ const ViewCVButton = () => {
 
       {/* Modal */}
       {isModalOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm p-2 sm:p-4"
           onClick={handleModalBackdropClick}
         >
@@ -144,7 +144,7 @@ const ViewCVButton = () => {
 
               {/* Action Buttons - Right side */}
               <div className="flex items-center space-x-2 sm:space-x-3">
-                <a 
+                <a
                   href="https://www.canva.com/design/DAGkTBlVMd0/ydTvrdC_TUqU2mgeLiIQ4Q/view"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -154,9 +154,9 @@ const ViewCVButton = () => {
                   <span className="hidden sm:inline">Open in New Tab</span>
                   <span className="sm:hidden">Open in New Tab</span>
                 </a>
-                
-                <a 
-                  href="https://media.omeshapasan.site/Static/Omesha_Pasan_CV.pdf"
+
+                <a
+                  href="https://media.omesha.site/Static/Omesha_Pasan_CV.pdf"
                   download
                   target="_blank"
                   rel="noopener noreferrer"
@@ -181,7 +181,7 @@ const ViewCVButton = () => {
                     </div>
                   </div>
                 )}
-                
+
                 {/* Iframe with proper Canva embed structure */}
                 <div className="relative w-full h-full rounded-lg overflow-hidden">
                   <iframe
@@ -246,7 +246,7 @@ const FloatingDock = () => {
       <div className="relative inline-flex overflow-hidden rounded-full p-[2px] group focus:outline-none">
         {/* Animated Border */}
         <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-        
+
         {/* Inner content */}
         <div className="relative flex items-center gap-1 sm:gap-2 bg-black/20 backdrop-blur-lg border border-white/10 rounded-full px-2 sm:px-4 py-2 sm:py-3">
           {links.map((link, index) => (
@@ -267,7 +267,7 @@ const FloatingDock = () => {
 
 const HeroSection = () => {
   return (
-    
+
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       <div className="block md:hidden [@media(min-width:1920px)]:block h-8"></div>
 
@@ -283,7 +283,7 @@ const HeroSection = () => {
         />
         {/* Radial gradient for the container to give a faded look */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black"></div>
-      
+
         {/* Spotlight Effects - Adjusted for mobile */}
         <div className="absolute top-0 left-0 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 opacity-20 sm:opacity-30">
           <Spotlight className="w-full h-full" fill="rgba(59, 130, 246, 0.5)" />
@@ -299,7 +299,7 @@ const HeroSection = () => {
         <div className="relative z-10 min-h-screen flex items-center">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
-              
+
               {/* Mobile: Profile Picture First */}
               <div className="flex justify-center lg:hidden order-1">
                 <div className="relative w-48 h-48 sm:w-64 sm:h-64">
@@ -307,14 +307,14 @@ const HeroSection = () => {
                   <div className="absolute -top-6 -left-6 sm:-top-8 sm:-left-8 w-[120%] h-[120%] bg-gradient-to-br from-blue-500 to-blue-400 rounded-[10%] skew-y-6 opacity-40 z-0"></div>
 
                   {/* Profile image */}
-                  <img 
+                  <img
                     src={profile}
                     alt="Omesha Pasan"
                     className="w-full h-full object-cover relative z-10 rounded-full"
                   />
                 </div>
               </div>
-              
+
               {/* Left Content */}
               <div className="space-y-6 sm:space-y-8 order-2 lg:order-1 text-center lg:text-left">
                 <div className="space-y-4 sm:space-y-6">
@@ -323,7 +323,7 @@ const HeroSection = () => {
                     <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent leading-tight">
                       Omesha Pasan
                     </h1>
-                    
+
                     <div className="h-8 sm:h-12 lg:h-16">
                       <Typewriter options={{
                         strings: ["Undergraduate Software Engineer", "Full Stack Developer"],
@@ -337,7 +337,7 @@ const HeroSection = () => {
                       }} />
                     </div>
                   </div>
-                  
+
                   <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                     Skilled Full Stack Software Developer with a strong foundation in designing and implementing innovative software solutions. Proficient in programming languages such as Python and Java, with extensive experience in developing web applications using Angular and Spring Boot.
                   </p>
@@ -358,7 +358,7 @@ const HeroSection = () => {
                   <div className="absolute -top-10 -left-10 w-[120%] h-[120%] bg-gradient-to-br from-blue-500 to-blue-400 rounded-[10%] skew-y-6 opacity-40 z-0"></div>
 
                   {/* Profile image */}
-                  <img 
+                  <img
                     src={profile}
                     alt="Omesha Pasan"
                     className="w-full h-full object-cover relative z-10 rounded-full"
